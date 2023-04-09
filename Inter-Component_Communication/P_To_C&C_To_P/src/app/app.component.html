@@ -1,0 +1,20 @@
+<h1>Demontration Of Parent To Child Component</h1>
+
+<h1> In Parent Component </h1>
+
+<app-demo [MessageFromParent]="MyMessage"></app-demo>
+
+
+<button (click)="changeData()">Change Data</button>
+
+<app-demo [MyParentArray]="Fruits"></app-demo>
+
+
+<app-demo [MyParentObj]="obj"></app-demo>
+
+
+<h1>Demontration Of Child To Parent Component</h1>
+
+<app-demo (MyChildEvent)="MyChildMessage=$event"></app-demo>
+
+<h1> {{ MyChildMessage }}</h1>
