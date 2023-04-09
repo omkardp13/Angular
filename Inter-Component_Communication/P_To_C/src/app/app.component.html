@@ -1,0 +1,13 @@
+<h1> Demonstration Of Parent To Child Component Communication</h1>
+
+<h1>Inside Parent Component</h1>
+
+<app-demo [MessageFromParent] = "Message"></app-demo>
+
+<app-demo [MyDataArray] = "Fruits"></app-demo>
+
+<app-demo [MyDataObj] = "obj"></app-demo>
+
+<button (click)="changeData()">Change Data</button>
+
+
