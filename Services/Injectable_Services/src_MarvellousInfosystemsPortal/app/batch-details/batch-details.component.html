@@ -1,0 +1,14 @@
+<!--
+    This code defines a template for an Angular component that displays a list of batch details. The template uses the *ngFor directive to iterate over an array of batches and display each batch's details in a list.
+-->
+
+
+<h1> Details Of Batches </h1>
+
+<ul *ngFor="let value of Batches">
+    <li>
+    {{value.Name}} -  {{value.Fess}} -  {{value.Duration}}
+    </li>
+</ul>
+
+
