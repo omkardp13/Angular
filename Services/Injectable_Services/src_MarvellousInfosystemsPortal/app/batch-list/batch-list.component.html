@@ -1,0 +1,12 @@
+<!--
+    This code defines an Angular template that displays a list of batch names. The template uses the *ngFor directive to iterate over an array of batches and display each batch's name in a list item.
+-->
+
+<h1> Names Of Batches </h1>
+
+<ul *ngFor="let value of Batches">
+    <li>
+    {{value.Name}} 
+    </li>
+</ul>
+
