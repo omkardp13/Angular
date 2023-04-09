@@ -1,0 +1,19 @@
+<h1>Demontration Of Parent To Child Communication</h1>
+
+<h2> In Child Component </h2>
+<h1>{{ "Message From Parent Is:"+MessageFromParent}}</h1>
+
+
+
+<h1 *ngFor="let fruit of MyParentArray">
+   {{fruit}}
+</h1>
+
+
+<h1> {{MyParentObj.name}}</h1>
+<h1> {{MyParentObj.age}}</h1>
+<h1> {{MyParentObj.isMarried}}</h1>
+
+<h1>------------------------------------------------------------------------------</h1><br>
+<h1>Demontration Of Child To Parent Communication</h1>
+<button (click)="SendData()">Send Data To Parent</button>
