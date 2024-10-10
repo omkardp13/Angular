@@ -1,4 +1,9 @@
 Component Life Cycles: Consist various stages from creation to destruction .
+                       Component Instantiating
+                       Rendering the component html view
+                       Creating the child component(if required)
+                       Destroying the component.
+                      
 
 1.NgOnChanges ---> Called when input properties of the component changes.
                    @Input Decorator.
