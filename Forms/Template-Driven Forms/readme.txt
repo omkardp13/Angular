@@ -4,7 +4,9 @@ Description:
 1.Template-driven forms rely on Angular's directives within the HTML template to create and manage forms. 
 2.This method is simpler and more declarative, as much of the form logic (like validations and bindings) is handled directly in the template.
 3.Two-Way data binding is used with the [(ngModel)] syntax.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Template-driven forms are ideal for simpler forms that don’t require advanced features like dynamic form controls or complex validations. They allow you to define validation and data binding directly in the template, making them easy to use for simple cases.
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
 Key Features:
 1.Less code in the component.
