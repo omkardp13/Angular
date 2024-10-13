@@ -1,0 +1,72 @@
+<!-- user-registration.component.html -->
+<div class="container">
+    <h2>User Registration (Reactive Form)</h2>
+  
+    <!-- Attach formGroup to the form -->
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      
+      <!-- Name Field -->
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          id="name"
+          class="form-control"
+          formControlName="name"
+          [ngClass]="{ 'is-invalid': name?.invalid && name?.touched }"
+          type="text"
+        />
+        <div *ngIf="name?.invalid && name?.touched" class="text-danger">
+          <div *ngIf="name?.errors?.['required']">Name is required.</div>
+          <div *ngIf="name?.errors?.['minlength']">
+            Name must be at least 3 characters long.
+          </div>
+        </div>
+      </div>
+  
+      <!-- Email Field -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          class="form-control"
+          formControlName="email"
+          [ngClass]="{ 'is-invalid': email?.invalid && email?.touched }"
+          type="email"
+        />
+        <div *ngIf="email?.invalid && email?.touched" class="text-danger">
+          <div *ngIf="email?.errors?.['required']">Email is required.</div>
+          <div *ngIf="email?.errors?.['email']">Please enter a valid email.</div>
+        </div>
+      </div>
+  
+      <!-- Password Field -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          id="password"
+          class="form-control"
+          formControlName="password"
+          [ngClass]="{ 'is-invalid': password?.invalid && password?.touched }"
+          type="password"
+        />
+        <div *ngIf="password?.invalid && password?.touched" class="text-danger">
+          <div *ngIf="password?.errors?.['required']">Password is required.</div>
+          <div *ngIf="password?.errors?.['minlength']">
+            Password must be at least 6 characters long.
+          </div>
+        </div>
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary" [disabled]="registrationForm.invalid">
+        Register
+      </button>
+    </form>
+  
+    <!-- Display form data after submission -->
+    <div *ngIf="registrationForm.valid">
+      <h3>Form Submitted!</h3>
+      <pre>{{ registrationForm.value | json }}</pre>
+    </div>
+  </div>
+  
