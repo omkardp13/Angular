@@ -1,10 +1,11 @@
 DOM : 
-A DOM (Document Object Model) element represents a single node in the HTML document structure and refers to any element in an HTML document, 
+1. A DOM (Document Object Model) element represents a single node in the HTML document structure and refers to any element in an HTML document, 
 such as <div>, <button>, or <input>.
-It is the building block of the webpage and can be manipulated using JavaScript or Angular to change the appearance, behavior, or content of the webpage.
+
+2.It is the building block of the webpage and can be manipulated using JavaScript or Angular to change the appearance, behavior, or content of the webpage.
 
 
-Accessing DOM Elements:
+3.Accessing DOM Elements:
 
 In Angular (or any JavaScript framework), you can access DOM elements to modify them dynamically.
 ElementRef and Renderer2 in Angular allow safe access to DOM elements to modify styles, content, or attributes without directly interacting with the DOM, which can be risky from a security standpoint (like Cross-Site Scripting, XSS).
