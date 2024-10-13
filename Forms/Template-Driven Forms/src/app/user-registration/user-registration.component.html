@@ -1,0 +1,80 @@
+<!-- user-registration.component.html -->
+<div class="container">
+    <h2>User Registration</h2>
+  
+    <!-- Add form with #f as a local reference to the form -->
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+  
+      <!-- Name Field -->
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input 
+          type="text" 
+          id="name" 
+          class="form-control"
+          name="name" 
+          [(ngModel)]="user.name"
+          required
+          #name="ngModel" />
+        
+        <!-- Error message for name field -->
+        <div *ngIf="name.invalid && name.touched" class="text-danger">
+          Name is required.
+        </div>
+      </div>
+  
+      <!-- Email Field -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          class="form-control"
+          name="email" 
+          [(ngModel)]="user.email"
+          required
+          email
+          #email="ngModel" />
+        
+        <!-- Error message for email field -->
+        <div *ngIf="email.invalid && email.touched" class="text-danger">
+          Enter a valid email.
+        </div>
+      </div>
+  
+      <!-- Password Field -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          class="form-control"
+          name="password" 
+          [(ngModel)]="user.password"
+          required
+          minlength="6"
+          #password="ngModel" />
+        
+        <!-- Error message for password field -->
+        <div *ngIf="password.invalid && password.touched" class="text-danger">
+          Password must be at least 6 characters.
+        </div>
+      </div>
+  
+      <!-- Submit Button -->
+      <button 
+        type="submit" 
+        class="btn btn-primary"
+        [disabled]="f.invalid">Submit</button>
+  
+    </form>
+    
+    <!-- Display form data after submission -->
+    <div *ngIf="submitted">
+      <h3>Form Submitted Successfully!</h3>
+      <p><strong>Name:</strong> {{ user.name }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Password:</strong> {{ user.password }}</p>
+    </div>
+  </div>
+  
