@@ -14,3 +14,11 @@ Server Side --->
 1.Pre-defined API's handling incoming requests & gathering response such as routing,middleware etc.
 2.Build in support of accessing & interacting with DB such as Object orientational mapping (ORM) query builders.
 3.Integration with third party services & API's.
+
+Angular Advantages --->
+
+1.Relatively simple to build SPA.
+2.To make flexible and structural applications(OOPS friendly).
+3.It is cross platform & open source(free).
+4.Re-usable code(Services)
+5.Tesability(spec.ts).
