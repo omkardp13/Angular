@@ -1,8 +1,8 @@
-**Angular** ---> Component Based Framework for building structural and scalable and single page web applications for client side.
+Angular ---> Component Based Framework for building structural and scalable and single page web applications for client side.
 
-**SinglePageApplication** ---> Web application which interacts with user dynamically re-writting the current page rather than loading entire new pages from a server.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-**Client Side** --->
+SinglePageApplication ---> Web application which interacts with user dynamically re-writting the current page rather than loading entire new pages from a server.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Client Side --->
 
 1.Set of UI pre-defined components.
 2.buld in support of handling events.
