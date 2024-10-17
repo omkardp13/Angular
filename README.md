@@ -1,4 +1,4 @@
-Angular ---> Component Based Framework for building structural and scalable and single page web applications for client side.
+****Angular ---> Component Based Framework for building structural and scalable and single page web applications for client side.
 
 SinglePageApplication ---> Web application which interacts with user dynamically re-writting the current page rather than loading entire new pages from a server.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -36,3 +36,4 @@ Angular Main Components & Features ---> Angular is popular & open source web app
 9.Http Client.
 
 1.
+****
