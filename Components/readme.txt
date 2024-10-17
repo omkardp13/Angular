@@ -1,7 +1,7 @@
 1.Components In Angular --->
     1.Components are most basic UI building blocks of an angular applications.
     2.Components are defined using @Component decorator.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 2.In Angular, a component is a fundamental building block that defines a part of the user interface (UI). Each component consists of:
 
@@ -12,7 +12,7 @@
  Styles: Define the look and feel of the component using CSS or SCSS.
 
  Metadata (Decorators): This provides metadata about the component, such as its selector, template URL, and style URLs.
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 3.Key Parts of an Angular Component
 
@@ -53,12 +53,13 @@ h1 {
   color: blue;
 }
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 Metadata: This is provided by the @Component decorator, which tells Angular that the class is a component and includes information about its selector, template, and styles.
 
-Example Component
+Example Component:
+
 Let’s create a simple component named app-greeting:
 
 greeting.component.ts:
@@ -127,5 +128,6 @@ ngOnChanges(): Called when any data-bound property changes.
 ngOnDestroy(): Cleanup logic when the component is destroyed.
 
 View Encapsulation: Angular components encapsulate their styles by default. This can be controlled via the encapsulation property (e.g., ViewEncapsulation.None for global styles).
+
 Components are the core units in Angular applications, helping to break down the UI into reusable, modular pieces.
                         
