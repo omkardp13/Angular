@@ -34,5 +34,17 @@ Angular Main Components & Features ---> Angular is popular & open source web app
 7.Routing
 8.Forms Validation
 9.Http Client.
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Constructor ---> 
+1.Used for dependancy injection & basic initialization
+2.Used for injecting services
+3.Initializating class members that don't depend on angular binding or angular compoent lifecycle.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+NgOnInit --->
+1.Lifecycle hook specialy designed for component initialization
+2.Called by angular after the components constructor and after angular has initialized the components input properties
+2.Any logic that requires componetns input properties to be set.
+                            
