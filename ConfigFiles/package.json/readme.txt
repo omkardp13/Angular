@@ -1,17 +1,21 @@
-The package.json file in an Angular project is essential as it defines the dependencies, scripts, and metadata for your application.
-It is automatically created when you generate an Angular project using the Angular CLI (ng new).
+                                             Package.json
+                                          -------------------
+
+1.The package.json file in an Angular project is essential as it defines the dependencies, scripts, and metadata for your application.
+
+2.It is automatically created when you generate an Angular project using the Angular CLI (ng new).
 
 Here’s a breakdown of the key sections of the package.json file in an Angular project:
 
 1. name and version
 These properties define the name and version of your Angular project.
 
-
 {
   "name": "angular-project",
   "version": "1.0.0"
 }
 
+----------------------------------------------------------------------------------------------------------------------------------------------
 
 2. scripts
 The scripts section defines custom scripts that can be run from the command line using npm run <script>. Common Angular-specific scripts include:
@@ -25,12 +29,19 @@ The scripts section defines custom scripts that can be run from the command line
   "lint": "ng lint",
   "e2e": "ng e2e"
 }
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+
 ng: Points to the Angular CLI command.
 start: Runs ng serve to start the development server.
 build: Compiles the Angular project into an output directory.
 test: Runs the unit tests using Karma.
 lint: Checks the project for linting errors.
 e2e: Runs end-to-end tests using Protractor.
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
 
 3. dependencies
 This section lists the runtime dependencies required for the application. These are packages required for the app to function.
@@ -54,6 +65,9 @@ Some important dependencies:
 @angular/common: Common utilities for Angular (like pipes, directives).
 rxjs: Reactive Extensions Library used heavily in Angular.
 zone.js: Required by Angular for change detection.
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+
 4. devDependencies
 This section lists the development-time dependencies needed for tasks such as testing, building, and linting.
 
@@ -76,15 +90,19 @@ typescript: TypeScript compiler.
 karma: Test runner for unit testing.
 protractor: Used for end-to-end testing.
 tslint: Used to lint your TypeScript code (though Angular is transitioning to ESLint).
+----------------------------------------------------------------------------------------------------------------------------------------------
+
 5. engines
 This section optionally specifies the version of Node.js and npm required to run the project.
 
-json
-Copy code
+
 "engines": {
   "node": ">=16.14.0",
   "npm": ">=8.5.0"
 }
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
 6. private
 Setting "private": true ensures the project is not accidentally published to the npm registry.
 
@@ -131,9 +149,11 @@ Copy code
   }
 }
 
+----------------------------------------------------------------------------------------------------------------------------------------------
 
 Key Takeaways:
 The package.json file manages the project's dependencies, scripts, and configuration.
 Dependencies are categorized into dependencies (runtime) and devDependencies (development-time).
 It includes commands like ng serve, ng build, and ng test for common development tasks.
 You can add custom scripts or dependencies as per the project requirements.
+----------------------------------------------------------------------------------------------------------------------------------------------
