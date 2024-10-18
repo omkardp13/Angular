@@ -1,24 +1,26 @@
+                                          Angular.json
+
+
 The angular.json file is a configuration file in Angular projects that defines how the application is structured, built, served, and tested. 
 It contains configuration settings for the Angular CLI and is critical for managing project settings such as paths, environments, assets, and other build options.
 
 Key Sections of angular.json
 Here’s an overview of the main sections and how they function:
 
-1. Project Structure
-The projects section defines all the projects in the workspace. This includes the main application, any libraries, and additional apps.
+1. Project Structure : The projects section defines all the projects in the workspace. This includes the main application, any libraries, and 
+                       additional apps.
 
-2. Architect Configuration
-Each project in the projects section has an architect section that defines configurations for:
+2. Architect Configuration :  Each project in the projects section has an architect section that defines configurations for:
 
-build: Defines how to compile the project for production and development.
+3.build : Defines how to compile the project for production and development.
 
-serve: Configuration for serving the application using ng serve.
+4.serve: Configuration for serving the application using ng serve.
 
-test: Defines how to run unit tests using ng test.
+5.test: Defines how to run unit tests using ng test.
 
-lint: Linting configurations for checking code quality using ng lint.
+6.lint: Linting configurations for checking code quality using ng lint.
 
-e2e: End-to-end testing configurations.
+7.e2e: End-to-end testing configurations.
 
 Structure and Configuration Options in angular.json
 
@@ -125,6 +127,7 @@ Here's a breakdown of the structure, using an example angular.json file:
   "defaultProject": "my-app"
 }
 
+----------------------------------------------------------------------------------------------------------------------------------------------
 
 Key Sections Explained:
 1. $schema
