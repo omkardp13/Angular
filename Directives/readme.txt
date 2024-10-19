@@ -16,7 +16,7 @@ export class HelloComponent {
 }
 In this case, <app-hello> is a directive that displays the content of the component.
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 2. Structural Directives : These directives modify the structure of the DOM by adding or removing elements. They are prefixed with *. Common structural directives include *ngIf, *ngFor, and *ngSwitch.
 
 Examples:
@@ -53,7 +53,7 @@ Examples:
 <div [ngClass]="{'active': isActive, 'disabled': isDisabled}">
   This div can be active or disabled based on conditions.
 </div>
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 2.ngStyle: Applies inline styles dynamically.
 
 
@@ -61,7 +61,7 @@ Examples:
   This text has dynamic font size and color.
 </p>
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Custom Attribute Directive: You can create your own attribute directive to add custom behavior to elements.
 
 
@@ -76,7 +76,7 @@ export class HighlightDirective {
 
 <p appHighlight>Highlighted text</p>
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Key Points:
 1.Structural directives modify the layout by adding/removing DOM elements.
 2.Attribute directives change the appearance or behavior of existing DOM elements.
