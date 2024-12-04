@@ -1,0 +1,73 @@
+1. initialize a component, it should call function inside a service, that function need to fetch the data from a json file via http request.
+the fetched data has to be displayed in the component
+
+--->
+
+Here’s a corrected and refined version of your implementation. It ensures that the service fetches the data via HTTP, and the component displays the data correctly in the HTML template.
+
+Service (demo.service.ts)
+
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class DemoService {
+  private dataUrl = 'assets/data.json'; // Path to the JSON file
+
+  constructor(private httpClient: HttpClient) {}
+
+  getData(): Observable<any> {
+    return this.httpClient.get<any>(this.dataUrl); // Adjust the type `<any>` to match the structure of your JSON data
+  }
+}
+
+---------------------------------------------------------------------------------------------------------------------
+
+Component (user.component.ts)
+
+import { Component, OnInit } from '@angular/core';
+import { DemoService } from './demo.service';
+
+@Component({
+  selector: 'app-user',
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.css'],
+})
+export class UserComponent implements OnInit {
+  users: any[] = []; // Replace `any` with your user type if defined, e.g., `User[]`
+
+  constructor(private demoService: DemoService) {}
+
+  ngOnInit(): void {
+    this.showData();
+  }
+
+  showData(): void {
+    this.demoService.getData().subscribe(
+      (data) => {
+        this.users = data; // Assuming your JSON is an array of users
+      },
+      (error) => {
+        console.error('Error fetching data:', error);
+      }
+    );
+  }
+}
+
+---------------------------------------------------------------------------------------------------------------------
+
+Template (user.component.html)
+html
+Copy code
+<h2>Information</h2>
+<div *ngFor="let user of users">
+  <p>Name: {{ user.name }}</p>
+  <p>Class: {{ user.class }}</p>
+</div>
+
+
+
+
